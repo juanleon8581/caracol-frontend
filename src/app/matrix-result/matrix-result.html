@@ -1,6 +1,35 @@
 <div role="status" aria-live="polite" class="result-panel">
-  <p class="result-text">
-    Se creará una matriz con patrón de caracol de
-    <strong>{{ size() }}</strong>.
-  </p>
+  @if (caracolData.isLoading()) {
+    <div class="result-loading" aria-busy="true">
+      <span class="result-loading__text">Generando matriz...</span>
+    </div>
+  } @else if (caracolData.error()) {
+    <div class="result-error" role="alert">
+      <p class="result-error__text">Error al generar la matriz. Intente nuevamente.</p>
+    </div>
+  } @else if (caracolData.value(); as data) {
+    <div class="result-content">
+      <table class="result-matrix @container" aria-label="Matriz de caracol">
+        <tbody>
+          @for (row of data.matrix; track $index) {
+            <tr>
+              @for (cell of row; track $index) {
+                <td class="result-matrix__cell @sm:bg-amber-700">{{ cell }}</td>
+              }
+            </tr>
+          }
+        </tbody>
+      </table>
+      <div class="result-diagonals">
+        <p class="result-diagonal">
+          <span class="result-diagonal__label">Diagonal: </span>
+          <span>{{ diagonalStr() }}</span>
+        </p>
+        <p class="result-diagonal">
+          <span class="result-diagonal__label">Diagonal inversa: </span>
+          <span>{{ reverseDiagonalStr() }}</span>
+        </p>
+      </div>
+    </div>
+  }
 </div>
