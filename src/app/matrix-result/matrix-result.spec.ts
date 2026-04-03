@@ -39,6 +39,7 @@ describe('MatrixResultComponent', () => {
 
   it('should create', () => {
     componentRef.setInput('size', 5);
+    fixture.detectChanges();
     expect(componentRef.instance).toBeTruthy();
     httpMock.expectOne('http://localhost:3000/api/caracol/5').flush(buildMockResponse(5));
   });
