@@ -1,0 +1,26 @@
+@reference "../styles.css";
+
+.page {
+  @apply min-h-screen w-screen bg-gray-50 flex flex-col justify-center items-center px-4 py-10;
+}
+
+.page__container {
+  @apply w-full max-w-md md:max-w-full;
+}
+
+.page__title {
+  @apply text-2xl md:text-3xl font-bold text-center text-gray-900 mb-8;
+}
+
+.page__content {
+  @apply flex flex-col justify-center items-center md:flex-row md:justify-around;
+}
+
+
+.page__card {
+  @apply bg-white rounded-xl shadow-sm border border-gray-200 p-6;
+}
+
+.page__result {
+  @apply  mt-6;
+}

@@ -1,0 +1,25 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()" novalidate>
+  <div class="form-field">
+    <label for="matrix-size" class="form-label">
+      Tamaño de la matriz (3 – 15)
+    </label>
+    <input
+      id="matrix-size"
+      type="number"
+      formControlName="size"
+      min="3"
+      max="15"
+      placeholder="Ingresa un número"
+      aria-describedby="matrix-size-error"
+      [class]="showError ? 'form-input form-input--error' : 'form-input'"
+    />
+    @if (showError) {
+      <p id="matrix-size-error" role="alert" class="form-error">
+        El número debe estar entre 3 y 15.
+      </p>
+    }
+  </div>
+  <button type="submit" class="form-btn">
+    Generar
+  </button>
+</form>

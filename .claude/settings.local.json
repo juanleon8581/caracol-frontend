@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/jpleon/Documents/dev/personal/tech-test/expe/caracol-frontend/src -name *.spec.ts)",
+      "Bash(npm list:*)",
+      "Bash(jq .projects.[\"\"caracol-frontend\"\"].architect.test)",
+      "mcp__angular__get_best_practices",
+      "mcp__angular__search_documentation",
+      "Bash(npm install:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(npm test:*)",
+      "mcp__angular__list_projects",
+      "WebFetch(domain:localhost)",
+      "Bash(curl -s http://localhost:3000/api-docs)",
+      "Bash(curl:*)",
+      "Bash(npm start:*)",
+      "Bash(npx ng:*)",
+      "Bash(node:*)"
+    ]
+  },
+  "enableAllProjectMcpServers": true,
+  "enabledMcpjsonServers": [
+    "angular"
+  ]
+}

@@ -1,0 +1,41 @@
+@reference "../../styles.css";
+
+.result-panel {
+  @apply bg-white border border-gray-200 rounded-xl shadow-sm p-6 min-w-72;
+}
+
+.result-loading {
+  @apply flex items-center justify-center py-8;
+}
+
+.result-loading__text {
+  @apply text-gray-500 text-sm animate-pulse;
+}
+
+.result-error {
+  @apply bg-red-50 border border-red-200 rounded-lg p-4;
+}
+
+.result-error__text {
+  @apply text-red-700 text-sm;
+}
+
+.result-content {
+  @apply flex flex-col gap-4;
+}
+
+.result-matrix {
+  @apply border-collapse;
+}
+
+.result-matrix__cell {
+  @apply border border-gray-200 text-center text-sm font-mono w-10 h-10;
+}
+
+.result-diagonals {
+  @apply flex flex-col gap-1 text-sm text-gray-700 border-t border-gray-100 pt-3;
+}
+
+.result-diagonal__label {
+  @apply font-semibold;
+}
