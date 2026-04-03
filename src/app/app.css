@@ -1,7 +1,7 @@
 @reference "../styles.css";
 
 .page {
-  @apply h-screen w-screen bg-gray-50 flex flex-col justify-center items-center px-4 py-10;
+  @apply min-h-screen w-screen bg-gray-50 flex flex-col justify-center items-center px-4 py-10;
 }
 
 .page__container {
